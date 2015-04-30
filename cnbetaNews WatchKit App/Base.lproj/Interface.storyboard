@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
+    </dependencies>
+    <scenes>
+        <!--cnBeta-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller title="cnBeta" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="cnbetaNews_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <table alignment="left" id="6wk-Y6-rt9">
+                            <items>
+                                <tableRow identifier="NewsRow" id="a1R-82-aey" customClass="NewsRow" customModule="cnbetaNews_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="D1h-5Z-JSX">
+                                        <items>
+                                            <label alignment="left" text="Label" numberOfLines="0" id="D3h-9q-qcd">
+                                                <fontDescription key="font" type="system" pointSize="12"/>
+                                                <variation key="device=watch42mm" text="新闻标题"/>
+                                            </label>
+                                            <label alignment="left" text="Label" id="b8e-TJ-Rh5">
+                                                <fontDescription key="font" type="system" pointSize="10"/>
+                                                <variation key="device=watch42mm" text="时间"/>
+                                            </label>
+                                        </items>
+                                        <variation key="device=watch42mm">
+                                            <mask key="items">
+                                                <include reference="D3h-9q-qcd"/>
+                                                <include reference="b8e-TJ-Rh5"/>
+                                            </mask>
+                                        </variation>
+                                    </group>
+                                    <connections>
+                                        <outlet property="labelNewstitle" destination="D3h-9q-qcd" id="umf-3s-mSr"/>
+                                        <outlet property="labelTime" destination="b8e-TJ-Rh5" id="RUP-VX-crr"/>
+                                    </connections>
+                                </tableRow>
+                                <tableRow identifier="ImageNewRow" id="tmZ-fL-IpE" customClass="ImageNewRow" customModule="cnbetaNews_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="rWE-s9-ez5">
+                                        <items>
+                                            <imageView width="40" height="40" alignment="left" id="Dhl-1B-Fpe"/>
+                                            <group alignment="left" layout="vertical" id="SKq-YO-ePJ">
+                                                <items>
+                                                    <label alignment="left" text="Label" numberOfLines="0" id="Gu2-hi-SS1">
+                                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="font" type="system" pointSize="12"/>
+                                                        <variation key="device=watch42mm" text="新闻标题"/>
+                                                    </label>
+                                                    <label alignment="left" text="Label" id="eea-Zr-jcl">
+                                                        <fontDescription key="font" type="system" pointSize="10"/>
+                                                    </label>
+                                                </items>
+                                                <variation key="device=watch42mm">
+                                                    <mask key="items">
+                                                        <include reference="Gu2-hi-SS1"/>
+                                                        <include reference="eea-Zr-jcl"/>
+                                                    </mask>
+                                                </variation>
+                                            </group>
+                                        </items>
+                                        <variation key="device=watch42mm">
+                                            <mask key="items">
+                                                <include reference="Dhl-1B-Fpe"/>
+                                                <include reference="SKq-YO-ePJ"/>
+                                            </mask>
+                                        </variation>
+                                    </group>
+                                    <connections>
+                                        <outlet property="imgNews" destination="Dhl-1B-Fpe" id="adf-8q-QEk"/>
+                                        <outlet property="labelNewsTitle" destination="Gu2-hi-SS1" id="Vux-1a-769"/>
+                                        <outlet property="labelTime" destination="eea-Zr-jcl" id="gY0-QE-3sp"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <variation key="device=watch42mm">
+                        <mask key="items">
+                            <include reference="6wk-Y6-rt9"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <outlet property="table" destination="6wk-Y6-rt9" id="thh-rN-DGd"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="216.20512820512823" y="299.46153846153851"/>
+        </scene>
+    </scenes>
+</document>
